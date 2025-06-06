@@ -59,8 +59,12 @@ const Hero = () => {
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-purple-400 to-blue-500 dark:from-purple-600 dark:to-blue-700 rounded-full flex items-center justify-center shadow-2xl">
-                <div className="w-72 h-72 lg:w-88 lg:h-88 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center">
-                  <div className="text-6xl lg:text-7xl">👨‍💻</div>
+                <div className="w-72 h-72 lg:w-88 lg:h-88 bg-white dark:bg-gray-800 rounded-full overflow-hidden flex items-center justify-center">
+                  <img 
+                    src="https://i.postimg.cc/MZQd56P8/IMG-20250218-072637-370.avif" 
+                    alt="Hit Nileshbhai Parekh" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               {/* Floating elements */}
