@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Skills = () => {
@@ -9,6 +8,8 @@ const Skills = () => {
     { name: 'Python', level: 75, color: 'bg-green-500' },
     { name: 'C', level: 70, color: 'bg-purple-500' },
     { name: 'C++', level: 70, color: 'bg-red-500' },
+    { name: 'Java', level: 75, color: 'bg-orange-600' },
+    { name: 'DBMS', level: 80, color: 'bg-indigo-500' },
   ];
 
   const designSkills = [
