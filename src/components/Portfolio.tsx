@@ -1,55 +1,55 @@
 
 import React from 'react';
-import { ExternalLink, Github, Plus } from 'lucide-react';
+import { ExternalLink, Github, Plus, Award } from 'lucide-react';
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section id="portfolio" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Portfolio</h2>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A showcase of my learning journey and upcoming projects
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Learning Projects Placeholder */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <div className="bg-gradient-to-br from-purple-100 to-blue-100 h-48 rounded-lg mb-6 flex items-center justify-center">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="bg-gradient-to-br from-purple-100 to-blue-100 dark:from-purple-900 dark:to-blue-900 h-48 rounded-lg mb-6 flex items-center justify-center">
               <div className="text-6xl opacity-50">📚</div>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Learning Experiments</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Learning Experiments</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               Exploring new technologies and practicing fundamental concepts through hands-on coding exercises.
             </p>
             <div className="flex space-x-2">
-              <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
-              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+              <span className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm">JavaScript</span>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-            <div className="bg-gradient-to-br from-orange-100 to-red-100 h-48 rounded-lg mb-6 flex items-center justify-center">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div className="bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900 dark:to-red-900 h-48 rounded-lg mb-6 flex items-center justify-center">
               <div className="text-6xl opacity-50">🎨</div>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Design Practice</h3>
-            <p className="text-gray-600 mb-4">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Design Practice</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               UI/UX design concepts and wireframing exercises to understand user-centered design principles.
             </p>
             <div className="flex space-x-2">
-              <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm">UI Design</span>
-              <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">UX Research</span>
+              <span className="bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300 px-3 py-1 rounded-full text-sm">UI Design</span>
+              <span className="bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 px-3 py-1 rounded-full text-sm">UX Research</span>
             </div>
           </div>
 
           {/* Coming Soon Project */}
-          <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl border-2 border-dashed border-purple-200 flex flex-col items-center justify-center text-center group hover:border-purple-400 transition-all duration-300">
-            <div className="bg-purple-100 p-4 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-              <Plus className="text-purple-600" size={32} />
+          <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-950 dark:to-blue-950 p-8 rounded-2xl border-2 border-dashed border-purple-200 dark:border-purple-700 flex flex-col items-center justify-center text-center group hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300">
+            <div className="bg-purple-100 dark:bg-purple-900 p-4 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+              <Plus className="text-purple-600 dark:text-purple-400" size={32} />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Exciting Projects Coming Soon</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Exciting Projects Coming Soon</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               I'm currently working on some amazing projects that will showcase my growing skills in web development and design.
             </p>
             <button className="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors">
@@ -58,10 +58,75 @@ const Portfolio = () => {
           </div>
         </div>
 
+        {/* Certificates Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center justify-center">
+              <Award className="mr-3 text-purple-600 dark:text-purple-400" size={32} />
+              Certificates & Achievements
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300">
+              Recent certifications and bootcamp completions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Microsoft Student Chapter Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/2bdb40ac-2c8a-4b85-b4e9-94ec1bd35d7b.png" 
+                  alt="Microsoft Student Chapter - SQL Bootcamp Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                SQL for Analyst Bootcamp
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                Microsoft Student Chapter - MSIT
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm">
+                  SQL Analytics
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  July 2025
+                </span>
+              </div>
+            </div>
+
+            {/* Google Developers Group Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/1e785a2e-81df-4ac8-bda5-1485f2665c79.png" 
+                  alt="Google Developers Group - SQL Bootcamp Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                SQL for Analyst Bootcamp
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                Google Developers Group - VIT-AP
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm">
+                  SQL Analytics
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  July 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-16 text-center">
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Building the Future</h3>
-            <p className="text-gray-600 leading-relaxed">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">🚀 Building the Future</h3>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               As a passionate BCA student, I'm constantly learning and building new projects. 
               While my portfolio is still growing, I'm excited to share my upcoming work that demonstrates 
               my dedication to creating innovative and user-friendly digital solutions. 
