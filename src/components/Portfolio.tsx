@@ -70,7 +70,7 @@ const Portfolio = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Microsoft Student Chapter Certificate */}
             <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
               <div className="mb-4">
@@ -139,6 +139,81 @@ const Portfolio = () => {
               <div className="flex items-center justify-between">
                 <span className="bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-sm">
                   SQL Analytics
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  July 2025
+                </span>
+              </div>
+            </div>
+
+            {/* Microsoft Student Chapter XSS Defense Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/c061f310-6c08-4180-ad5f-11e6bc8b223f.png" 
+                  alt="Microsoft Student Chapter - XSS Defense Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                XSS Defense: Block Hackers with One Click
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                Microsoft Student Chapter - MSIT
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm">
+                  Cybersecurity
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  July 2025
+                </span>
+              </div>
+            </div>
+
+            {/* Google Developers Group XSS Defense Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/5b728396-b7fa-44d8-ad12-3dfa8d924f9e.png" 
+                  alt="Google Developers Group - XSS Defense Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                XSS Defense: Block Hackers with One Click
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                Google Developers Group - VIT-AP
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm">
+                  Cybersecurity
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  July 2025
+                </span>
+              </div>
+            </div>
+
+            {/* DevTown XSS Defense Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/baaad364-ace4-45fe-b220-ce650b8d06ca.png" 
+                  alt="DevTown - XSS Defense Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                XSS Defense: Block Hackers with One Click
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                DevTown in collaboration with MSIT
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 px-3 py-1 rounded-full text-sm">
+                  Cybersecurity
                 </span>
                 <span className="text-gray-500 dark:text-gray-400 text-sm">
                   July 2025
