@@ -220,6 +220,81 @@ const Portfolio = () => {
                 </span>
               </div>
             </div>
+
+            {/* DevTown Array Mastery Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/1a069478-e4e3-41c1-9034-23d92fa2be38.png" 
+                  alt="DevTown - Array Mastery Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Array Mastery: Crack Array Puzzles Like a Pro
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                DevTown in collaboration with StartupIndia
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-3 py-1 rounded-full text-sm">
+                  Data Structures
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  June 2025
+                </span>
+              </div>
+            </div>
+
+            {/* Microsoft Student Chapter Array Mastery Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/18a4b27e-15eb-4df2-9b4c-43799a470a55.png" 
+                  alt="Microsoft Student Chapter - Array Mastery Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Array Mastery: Crack Array Puzzles Like a Pro
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                Microsoft Student Chapter - MSIT
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm">
+                  Data Structures
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  June 2025
+                </span>
+              </div>
+            </div>
+
+            {/* Google Developers Group Array Mastery Certificate */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/2bb8c830-4c8a-41b0-86fa-ba60908bbab5.png" 
+                  alt="Google Developers Group - Array Mastery Certificate"
+                  className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-700"
+                />
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                Array Mastery: Crack Array Puzzles Like a Pro
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                Google Developers Group - VIT-AP
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm">
+                  Data Structures
+                </span>
+                <span className="text-gray-500 dark:text-gray-400 text-sm">
+                  June 2025
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
