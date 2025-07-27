@@ -26,7 +26,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('home')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Home</button>
             <button onClick={() => scrollToSection('about')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">About</button>
             <button onClick={() => scrollToSection('skills')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Skills</button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Services</button>
+            <button onClick={() => scrollToSection('certificates')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Certificates</button>
             <button onClick={() => scrollToSection('portfolio')} className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</button>
             <button onClick={() => scrollToSection('contact')} className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">Contact</button>
             <ThemeToggle />
@@ -50,7 +50,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('home')} className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Home</button>
             <button onClick={() => scrollToSection('about')} className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">About</button>
             <button onClick={() => scrollToSection('skills')} className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Skills</button>
-            <button onClick={() => scrollToSection('services')} className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Services</button>
+            <button onClick={() => scrollToSection('certificates')} className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Certificates</button>
             <button onClick={() => scrollToSection('portfolio')} className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</button>
             <button onClick={() => scrollToSection('contact')} className="block bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors text-center">Contact</button>
           </nav>
