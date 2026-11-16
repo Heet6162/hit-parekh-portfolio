@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     siteName: "Hit Parekh Portfolio",
     images: [
       {
-        url: "/images/myphoto.jpeg",
+        url: "/images/portfolio-thumbnail.jpg",
         width: 1200,
         height: 630,
-        alt: "Hit Parekh — Full-Stack Web Developer & AI Enthusiast",
+        alt: "Hit Parekh — Full-Stack Web Developer & AI Enthusiast Portfolio",
       },
     ],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Hit Parekh | Full-Stack Web Developer & AI Enthusiast",
     description:
       "Building Digital Experiences Through Code, Creativity & Innovation. BCA @ CVM University.",
-    images: ["/images/myphoto.jpeg"],
+    images: ["/images/portfolio-thumbnail.jpg"],
   },
   robots: {
     index: true,
