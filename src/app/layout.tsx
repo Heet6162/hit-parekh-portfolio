@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Hit Parekh", url: "https://github.com/Heet6162" }],
   creator: "Hit Parekh",
+  icons: {
+    icon: "/images/hp-logo-dark.png",
+    shortcut: "/images/hp-logo-dark.png",
+    apple: "/images/hp-logo-dark.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

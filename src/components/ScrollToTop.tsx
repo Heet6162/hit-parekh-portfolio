@@ -33,7 +33,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-40 p-3 rounded-full glass-panel border border-cyan-400/40 text-cyan-400 hover:text-white hover:border-cyan-400 shadow-xl shadow-black/50 transition-all duration-300 hover:scale-110 active:scale-95 group"
+      className="fixed bottom-20 right-6 z-40 p-3 rounded-full glass-panel border border-cyan-400/40 text-cyan-400 hover:text-white hover:border-cyan-400 shadow-xl shadow-black/50 transition-all duration-300 hover:scale-110 active:scale-95 group cursor-pointer"
       aria-label="Scroll to top"
     >
       {/* Circular progress svg */}

@@ -14,12 +14,17 @@ import Footer from "@/components/Footer";
 import ResumeModal from "@/components/ResumeModal";
 import ScrollToTop from "@/components/ScrollToTop";
 import CustomCursor from "@/components/CustomCursor";
+import Preloader from "@/components/Preloader";
+import AiAssistant from "@/components/AiAssistant";
 
 export default function Home() {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   return (
     <div className="relative min-h-screen flex flex-col" style={{ backgroundColor: "var(--bg-primary)", color: "var(--text-primary)" }}>
+      {/* Site Preloader / Cyber Splash Screen */}
+      <Preloader />
+
       {/* Custom Glowing Cursor for Desktop */}
       <CustomCursor />
 
@@ -58,6 +63,9 @@ export default function Home() {
 
       {/* Floating Utilities */}
       <ScrollToTop />
+
+      {/* Hit's Interactive AI Assistant */}
+      <AiAssistant onOpenResume={() => setResumeModalOpen(true)} />
 
       {/* Full Resume & CV Modal */}
       <ResumeModal

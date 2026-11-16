@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Menu,
   X,
@@ -84,7 +85,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo: Custom HP Monogram */}
+            {/* Logo: Official HP Custom Brand Logo */}
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, "#home")}
@@ -92,15 +93,30 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
               aria-label="Hit Parekh Home"
             >
               <div
-                className="relative flex items-center justify-center w-10 h-10 rounded-xl border transition-all duration-300 shadow-md group-hover:scale-105"
+                className="relative flex items-center justify-center w-10 h-10 rounded-xl border overflow-hidden transition-all duration-300 shadow-md group-hover:scale-105"
                 style={{
                   backgroundColor: "var(--bg-card)",
                   borderColor: "var(--border-accent)",
                 }}
               >
-                <span className="font-heading font-extrabold text-base tracking-tighter bg-gradient-to-r from-cyan-500 via-sky-400 to-violet-500 bg-clip-text text-transparent">
-                  HP
-                </span>
+                {/* Dark mode logo */}
+                <Image
+                  src={getAssetPath("/images/hp-logo-dark.png")}
+                  alt="Hit Parekh HP Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover dark:block hidden"
+                  priority
+                />
+                {/* Light mode logo */}
+                <Image
+                  src={getAssetPath("/images/hp-logo-light.png")}
+                  alt="Hit Parekh HP Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover dark:hidden block"
+                  priority
+                />
                 <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#05070f] animate-pulse" />
               </div>
               <div className="flex flex-col text-left">

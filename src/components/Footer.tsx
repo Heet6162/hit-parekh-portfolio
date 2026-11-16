@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Mail, MapPin, ArrowUp } from "lucide-react";
 import { LinkedInIcon, GitHubIcon } from "./SocialIcons";
 import { PERSONAL_INFO } from "@/data/portfolioData";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(2026);
@@ -46,10 +48,23 @@ export default function Footer() {
           {/* Brand & Bio */}
           <div className="md:col-span-5 space-y-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 via-slate-900 to-violet-600/30 border border-cyan-400/40 shadow-lg shadow-cyan-500/10">
-                <span className="font-heading font-extrabold text-base tracking-tighter bg-gradient-to-r from-cyan-400 via-sky-300 to-violet-400 bg-clip-text text-transparent">
-                  HP
-                </span>
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden border border-cyan-400/40 shadow-lg shadow-cyan-500/10 shrink-0">
+                {/* Dark mode logo */}
+                <Image
+                  src={getAssetPath("/images/hp-logo-dark.png")}
+                  alt="Hit Parekh HP Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover dark:block hidden"
+                />
+                {/* Light mode logo */}
+                <Image
+                  src={getAssetPath("/images/hp-logo-light.png")}
+                  alt="Hit Parekh HP Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover dark:hidden block"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-bold text-base" style={{ color: "var(--text-primary)" }}>
