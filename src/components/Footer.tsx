@@ -48,14 +48,14 @@ export default function Footer() {
           {/* Brand & Bio */}
           <div className="md:col-span-5 space-y-4 text-left">
             <div className="flex items-center gap-3">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl overflow-hidden border border-cyan-400/40 shadow-lg shadow-cyan-500/10 shrink-0">
+              <div className="relative flex items-center justify-center w-10 h-10 shrink-0">
                 {/* Dark mode logo */}
                 <Image
                   src={getAssetPath("/images/hp-logo-dark.png")}
                   alt="Hit Parekh HP Logo"
                   width={40}
                   height={40}
-                  className="w-full h-full object-cover dark:block hidden"
+                  className="w-full h-full object-contain dark:block hidden filter drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]"
                 />
                 {/* Light mode logo */}
                 <Image
@@ -63,7 +63,7 @@ export default function Footer() {
                   alt="Hit Parekh HP Logo"
                   width={40}
                   height={40}
-                  className="w-full h-full object-cover dark:hidden block"
+                  className="w-full h-full object-contain dark:hidden block"
                 />
               </div>
               <div className="flex flex-col">

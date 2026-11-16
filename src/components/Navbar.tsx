@@ -85,52 +85,40 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo: Official HP Custom Brand Logo */}
+            {/* Logo: Official HP Custom Brand Logo (Transparent) */}
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, "#home")}
-              className="group flex items-center gap-3 focus:outline-none"
+              className="group flex items-center gap-2.5 focus:outline-none"
               aria-label="Hit Parekh Home"
             >
-              <div
-                className="relative flex items-center justify-center w-10 h-10 rounded-xl border overflow-hidden transition-all duration-300 shadow-md group-hover:scale-105"
-                style={{
-                  backgroundColor: "var(--bg-card)",
-                  borderColor: "var(--border-accent)",
-                }}
-              >
-                {/* Dark mode logo */}
+              <div className="relative flex items-center justify-center w-10 h-10 transition-all duration-300 group-hover:scale-105 shrink-0">
+                {/* Dark mode logo (transparent) */}
                 <Image
                   src={getAssetPath("/images/hp-logo-dark.png")}
                   alt="Hit Parekh HP Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-cover dark:block hidden"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-contain dark:block hidden filter drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]"
                   priority
                 />
-                {/* Light mode logo */}
+                {/* Light mode logo (transparent) */}
                 <Image
                   src={getAssetPath("/images/hp-logo-light.png")}
                   alt="Hit Parekh HP Logo"
-                  width={40}
-                  height={40}
-                  className="w-full h-full object-cover dark:hidden block"
+                  width={44}
+                  height={44}
+                  className="w-full h-full object-contain dark:hidden block filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]"
                   priority
                 />
                 <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#05070f] animate-pulse" />
               </div>
               <div className="flex flex-col text-left">
                 <span
-                  className="font-heading font-bold text-sm tracking-tight transition-colors group-hover:text-cyan-500"
+                  className="font-heading font-bold text-base tracking-tight transition-colors group-hover:text-cyan-500"
                   style={{ color: "var(--text-primary)" }}
                 >
                   Hit Parekh
-                </span>
-                <span
-                  className="text-[11px] font-mono tracking-wider"
-                  style={{ color: "var(--text-muted)" }}
-                >
-                  Developer • AI
                 </span>
               </div>
             </a>
@@ -253,33 +241,16 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
           </div>
 
           <div className="pt-6 border-t space-y-2.5" style={{ borderColor: "var(--border)" }}>
-            <button
-              type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenResume?.();
-              }}
-              className="btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-xl font-medium text-sm shadow-lg shadow-cyan-500/20 cursor-pointer"
-              style={{ color: "#ffffff" }}
-            >
-              <FileText className="w-4 h-4" style={{ color: "#ffffff" }} />
-              <span style={{ color: "#ffffff" }}>View Resume / CV</span>
-            </button>
-
             <a
               href={getAssetPath("/Hit_Parekh_Resume.pdf")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs border transition-colors hover:border-cyan-400/50"
-              style={{
-                backgroundColor: "var(--bg-card)",
-                borderColor: "var(--border)",
-                color: "var(--text-secondary)",
-              }}
+              className="btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-xl font-medium text-sm shadow-lg shadow-cyan-500/20 cursor-pointer"
+              style={{ color: "#ffffff" }}
             >
-              <Download className="w-3.5 h-3.5 text-cyan-500" />
-              <span>Open PDF Directly</span>
+              <FileText className="w-4 h-4" style={{ color: "#ffffff" }} />
+              <span style={{ color: "#ffffff" }}>View Resume (PDF)</span>
             </a>
 
             <div

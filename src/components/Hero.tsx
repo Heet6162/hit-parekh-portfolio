@@ -167,28 +167,16 @@ export default function Hero({ onOpenResume }: HeroProps) {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button
-                type="button"
-                onClick={onOpenResume}
-                id="hero-view-resume-btn"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold border shadow-lg transition-all duration-300 active:scale-95 hover:border-cyan-400/60 hover:scale-[1.02] cursor-pointer"
-                style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-              >
-                <FileText className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
-                <span>View Resume</span>
-              </button>
-
               <a
                 href={getAssetPath("/Hit_Parekh_Resume.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
-                id="hero-direct-resume-pdf"
-                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-xs font-mono font-medium border transition-all duration-300 active:scale-95 hover:border-violet-400/60 hover:text-cyan-500"
-                style={{ backgroundColor: "var(--bg-card)", borderColor: "var(--border)", color: "var(--text-muted)" }}
-                title="Open PDF directly in new tab or download"
+                id="hero-view-resume-btn"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border shadow-lg transition-all duration-300 active:scale-95 hover:border-cyan-400/60 hover:scale-[1.02] cursor-pointer"
+                style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border)", color: "var(--text-primary)" }}
               >
-                <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
-                <span>PDF (Direct)</span>
+                <FileText className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
+                <span>View Resume</span>
               </a>
             </div>
 
