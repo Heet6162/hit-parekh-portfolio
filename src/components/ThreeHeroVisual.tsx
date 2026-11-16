@@ -209,38 +209,38 @@ export default function ThreeHeroVisual() {
       {isClient && (
         <>
           {/* Badge 1: Top Left - AI Integration */}
-          <div className="absolute top-6 left-2 sm:left-4 glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-3 border border-cyan-500/30 shadow-lg shadow-cyan-500/10 animate-float pointer-events-none">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-500 dark:text-cyan-400">
-              <Sparkles className="w-4 h-4" />
+          <div className="absolute top-4 left-2 sm:top-6 sm:left-4 glass-panel px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl flex items-center gap-2.5 sm:gap-3 border border-cyan-500/30 shadow-lg shadow-cyan-500/10 animate-float pointer-events-none max-w-[200px] sm:max-w-none">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-500 dark:text-cyan-400 shrink-0">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
             <div>
-              <p className="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider font-semibold">AI Powered</p>
-              <p className="text-xs font-semibold" style={{ color: "var(--text-primary)" }}>Gemini API & LLM Mentors</p>
+              <p className="text-[10px] sm:text-[11px] font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider font-semibold">AI Powered</p>
+              <p className="text-[11px] sm:text-xs font-semibold truncate" style={{ color: "var(--text-primary)" }}>Gemini API & LLMs</p>
             </div>
           </div>
 
           {/* Badge 2: Bottom Left - Academic Excellence */}
           <div
-            className="absolute bottom-8 left-2 sm:left-6 glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-3 border border-violet-500/30 shadow-lg shadow-violet-500/10 pointer-events-none"
+            className="absolute bottom-6 left-2 sm:bottom-8 sm:left-6 glass-panel px-3 sm:px-4 py-2 sm:py-2.5 rounded-2xl flex items-center gap-2.5 sm:gap-3 border border-violet-500/30 shadow-lg shadow-violet-500/10 pointer-events-none max-w-[200px] sm:max-w-none"
             style={{ animation: "float 7s ease-in-out infinite 1s" }}
           >
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-violet-500/20 to-indigo-500/20 border border-violet-400/40 flex items-center justify-center text-violet-500 dark:text-violet-400">
-              <Terminal className="w-4 h-4" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-tr from-violet-500/20 to-indigo-500/20 border border-violet-400/40 flex items-center justify-center text-violet-500 dark:text-violet-400 shrink-0">
+              <Terminal className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="text-xs font-bold" style={{ color: "var(--text-primary)" }}>8.84 CGPA</span>
-                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-violet-500/20 text-violet-700 dark:text-violet-300 font-mono font-semibold">
+                <span className="text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded-full bg-violet-500/20 text-violet-700 dark:text-violet-300 font-mono font-semibold">
                   Distinction
                 </span>
               </div>
-              <p className="text-[11px]" style={{ color: "var(--text-muted)" }}>CVM University • BCA</p>
+              <p className="text-[10px] sm:text-[11px]" style={{ color: "var(--text-muted)" }}>CVM Univ • BCA</p>
             </div>
           </div>
 
-          {/* Badge 3: Top Right - Full Stack Web */}
+          {/* Badge 3: Top Right - Full Stack Web (desktop/tablet) */}
           <div
-            className="absolute top-12 right-2 sm:right-4 glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-3 border border-blue-500/30 shadow-lg shadow-blue-500/10 pointer-events-none"
+            className="hidden sm:flex absolute top-12 right-4 glass-panel px-4 py-2.5 rounded-2xl items-center gap-3 border border-blue-500/30 shadow-lg shadow-blue-500/10 pointer-events-none"
             style={{ animation: "float 8s ease-in-out infinite 2s" }}
           >
             <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-500/20 to-cyan-500/20 border border-blue-400/40 flex items-center justify-center text-blue-500 dark:text-blue-400">

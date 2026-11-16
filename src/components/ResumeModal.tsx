@@ -48,9 +48,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   };
 
   const handleDownloadPDF = () => {
+    const pdfUrl = getAssetPath("/Hit_Parekh_Resume.pdf");
     const link = document.createElement("a");
-    link.href = getAssetPath("/Hit_Parekh_Resume.pdf");
+    link.href = pdfUrl;
     link.download = "Hit_Parekh_Resume.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -76,23 +79,34 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           </div>
 
           <div className="flex items-center gap-2">
+            <a
+              href={getAssetPath("/Hit_Parekh_Resume.pdf")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 text-xs font-medium border border-white/10 transition-colors"
+              title="Open PDF in new tab"
+            >
+              <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="hidden sm:inline">Open PDF</span>
+            </a>
+
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 text-xs font-medium border border-white/10 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 text-xs font-medium border border-white/10 transition-colors cursor-pointer"
               title="Print Resume"
             >
               <Printer className="w-3.5 h-3.5 text-cyan-400" />
-              <span>Print / PDF</span>
+              <span className="hidden sm:inline">Print</span>
             </button>
 
             <button
               onClick={handleDownloadPDF}
               id="download-resume-btn"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white text-xs font-semibold shadow-md shadow-cyan-500/20 transition-all active:scale-95"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white text-xs font-semibold shadow-md shadow-cyan-500/20 transition-all active:scale-95 cursor-pointer"
               title="Download PDF Resume"
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Download PDF</span>
+              <span>Download</span>
             </button>
 
             <button

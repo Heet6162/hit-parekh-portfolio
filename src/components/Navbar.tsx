@@ -5,6 +5,7 @@ import {
   Menu,
   X,
   FileText,
+  Download,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { getAssetPath } from "@/utils/assetPath";
@@ -235,16 +236,34 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             })}
           </div>
 
-          <div className="pt-6 border-t space-y-3" style={{ borderColor: "var(--border)" }}>
-            <a
-              href={getAssetPath("/Hit_Parekh_Resume.pdf")}
-              download="Hit_Parekh_Resume.pdf"
-              onClick={() => setMobileMenuOpen(false)}
-              className="btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-xl font-medium text-sm shadow-lg shadow-cyan-500/20"
+          <div className="pt-6 border-t space-y-2.5" style={{ borderColor: "var(--border)" }}>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenResume?.();
+              }}
+              className="btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-xl font-medium text-sm shadow-lg shadow-cyan-500/20 cursor-pointer"
               style={{ color: "#ffffff" }}
             >
               <FileText className="w-4 h-4" style={{ color: "#ffffff" }} />
-              <span style={{ color: "#ffffff" }}>Download Resume</span>
+              <span style={{ color: "#ffffff" }}>View Resume / CV</span>
+            </button>
+
+            <a
+              href={getAssetPath("/Hit_Parekh_Resume.pdf")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl font-medium text-xs border transition-colors hover:border-cyan-400/50"
+              style={{
+                backgroundColor: "var(--bg-card)",
+                borderColor: "var(--border)",
+                color: "var(--text-secondary)",
+              }}
+            >
+              <Download className="w-3.5 h-3.5 text-cyan-500" />
+              <span>Open PDF Directly</span>
             </a>
 
             <div

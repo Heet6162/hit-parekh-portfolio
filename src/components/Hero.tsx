@@ -10,6 +10,7 @@ import {
   Terminal,
   MapPin,
   ExternalLink,
+  FileText,
 } from "lucide-react";
 import { LinkedInIcon, GitHubIcon } from "./SocialIcons";
 import { PERSONAL_INFO } from "@/data/portfolioData";
@@ -157,24 +158,37 @@ export default function Hero({ onOpenResume }: HeroProps) {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-10 w-full sm:w-auto">
               <button
                 onClick={() => scrollToSection("projects")}
-                className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 hover:from-cyan-400 hover:via-blue-500 hover:to-violet-500 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 active:scale-95"
+                className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 hover:from-cyan-400 hover:via-blue-500 hover:to-violet-500 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 active:scale-95 cursor-pointer"
               >
                 <span>View My Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <a
-                href={getAssetPath("/Hit_Parekh_Resume.pdf")}
-                download="Hit_Parekh_Resume.pdf"
-                id="hero-download-resume"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border shadow-lg transition-all duration-300 active:scale-95 hover:border-cyan-400/60 hover:scale-[1.02]"
+              <button
+                type="button"
+                onClick={onOpenResume}
+                id="hero-view-resume-btn"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold border shadow-lg transition-all duration-300 active:scale-95 hover:border-cyan-400/60 hover:scale-[1.02] cursor-pointer"
                 style={{ backgroundColor: "var(--bg-surface)", borderColor: "var(--border)", color: "var(--text-primary)" }}
               >
-                <Download className="w-4 h-4 text-cyan-400" />
-                <span>Download Resume</span>
+                <FileText className="w-4 h-4 text-cyan-500 dark:text-cyan-400" />
+                <span>View Resume</span>
+              </button>
+
+              <a
+                href={getAssetPath("/Hit_Parekh_Resume.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+                id="hero-direct-resume-pdf"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-xs font-mono font-medium border transition-all duration-300 active:scale-95 hover:border-violet-400/60 hover:text-cyan-500"
+                style={{ backgroundColor: "var(--bg-card)", borderColor: "var(--border)", color: "var(--text-muted)" }}
+                title="Open PDF directly in new tab or download"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-cyan-400" />
+                <span>PDF (Direct)</span>
               </a>
             </div>
 
