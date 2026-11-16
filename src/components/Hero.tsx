@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { LinkedInIcon, GitHubIcon } from "./SocialIcons";
 import { PERSONAL_INFO } from "@/data/portfolioData";
+import { getAssetPath } from "@/utils/assetPath";
 import ThreeHeroVisual from "./ThreeHeroVisual";
 
 interface HeroProps {
@@ -166,7 +167,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
               </button>
 
               <a
-                href="/Hit_Parekh_Resume.pdf"
+                href={getAssetPath("/Hit_Parekh_Resume.pdf")}
                 download="Hit_Parekh_Resume.pdf"
                 id="hero-download-resume"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border shadow-lg transition-all duration-300 active:scale-95 hover:border-cyan-400/60 hover:scale-[1.02]"

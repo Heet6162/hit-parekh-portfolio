@@ -7,6 +7,7 @@ import {
   FileText,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import { getAssetPath } from "@/utils/assetPath";
 
 interface NavbarProps {
   onOpenResume?: () => void;
@@ -236,7 +237,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
 
           <div className="pt-6 border-t space-y-3" style={{ borderColor: "var(--border)" }}>
             <a
-              href="/Hit_Parekh_Resume.pdf"
+              href={getAssetPath("/Hit_Parekh_Resume.pdf")}
               download="Hit_Parekh_Resume.pdf"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary w-full flex items-center justify-center gap-2 py-3 rounded-xl font-medium text-sm shadow-lg shadow-cyan-500/20"

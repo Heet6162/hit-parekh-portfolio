@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/utils/assetPath";
+
 export interface Project {
   id: string;
   title: string;
@@ -260,7 +262,7 @@ export const PROJECTS: Project[] = [
       "Developed a luxury watch e-commerce platform featuring a multi-brand product catalog, gender and category filters, shopping cart, and complete order management functionality.",
     longDescription:
       "Premium Watch Hub is an end-to-end luxury timepiece e-commerce solution. It solves the complexity of managing multi-brand catalogs with faceted filtering by gender, brand, collection, and price tier. The application features an administrative suite for catalog curation, real-time inventory adjustments, order lifecycle tracking, customer review moderation, and downloadable PDF-ready invoice receipts.",
-    image: "/images/watch-hub.jpg",
+    image: getAssetPath("/images/watch-hub.jpg"),
     technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
     keyFeatures: [
       "Multi-brand watch catalog (Patek Philippe, Rolex, Audemars Piguet, Hublot)",
@@ -296,7 +298,7 @@ export const PROJECTS: Project[] = [
       "Built a restaurant ordering platform featuring a 29-dish menu across 9 categories, online ordering, table reservations, customer reviews, and an administrative management dashboard.",
     longDescription:
       "Taste of Punjab is a specialized restaurant hospitality and ordering platform designed for both diners and restaurant management. Diners can explore 29 curated dishes across 9 culinary categories, place orders with flexible payment options (Cash on Delivery, UPI, and Card), reserve dining tables with specific guest counts and dates, and generate printable order receipts. The back-office dashboard empowers restaurant staff to manage live orders, oversee reservation schedules, and analyze daily sales metrics.",
-    image: "/images/taste-of-punjab.jpg",
+    image: getAssetPath("/images/taste-of-punjab.jpg"),
     technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
     keyFeatures: [
       "29 curated dishes spanning 9 culinary categories",
@@ -332,7 +334,7 @@ export const PROJECTS: Project[] = [
       "Developed an interactive 3D browser-based racing game featuring six supercars with different performance statistics and five selectable racing tracks.",
     longDescription:
       "Hyper Crown Racing leverages Three.js and WebGL to deliver an adrenaline-fueled racing experience straight in the browser without third-party plugins. Players can choose from six high-performance supercars, each calibrated with unique speed, acceleration, and durability statistics. The game features five neon-lit futuristic circuits, interactive solo and group race modes, dynamic camera chase perspectives, realistic particle exhaust trails, a live telemetry HUD, and immersive background audio with full volume controls.",
-    image: "/images/hyper-crown-racing.jpg",
+    image: getAssetPath("/images/hyper-crown-racing.jpg"),
     technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "WebGL"],
     keyFeatures: [
       "6 high-performance supercars with distinct 3D models and paint schemes",
@@ -368,7 +370,7 @@ export const PROJECTS: Project[] = [
       "Built an AI-powered career guidance platform that helps students discover suitable career paths through a structured assessment, weighted scoring engine, personalized AI explanations, and progress-tracked learning roadmaps.",
     longDescription:
       "CareerSync is an extensive 18-page AI-powered web platform engineered to solve student career indecision. It features a proprietary 5-step assessment backed by a mathematical weighted scoring engine that allocates importance across Skills (40%), Interests (25%), Academics (15%), Preferences (10%), and Goals (10%). Integrated with Google Gemini API, CareerSync delivers tailored career advice, skill-gap analysis against real industry benchmarks, and generates dynamic step-by-step learning roadmaps with progress tracking. The platform includes a context-aware AI mentor chat assistant capable of answering role-specific questions in real time.",
-    image: "/images/careersync.jpg",
+    image: getAssetPath("/images/careersync.jpg"),
     technologies: [
       "Next.js",
       "TypeScript",
@@ -419,7 +421,7 @@ export const CERTIFICATIONS: Certification[] = [
     skills: ["AI Fundamentals", "Machine Learning", "Deep Learning", "Natural Language Processing", "Computer Vision"],
     summary:
       "Comprehensive certification from IBM SkillsBuild validating foundational AI literacy, neural network architectures, predictive modeling, machine learning pipelines, and computer vision systems.",
-    image: "/Certification/Getting Started with Artificial Intelligence.png",
+    image: getAssetPath("/Certification/Getting Started with Artificial Intelligence.png"),
   },
   {
     id: "chatgpt-for-coders",
@@ -431,7 +433,7 @@ export const CERTIFICATIONS: Certification[] = [
     skills: ["Prompt Engineering", "Code Generation", "Debugging with AI", "Software Productivity"],
     summary:
       "Mastered developer prompt engineering techniques, AI-assisted debugging, automated documentation generation, and accelerating modern software development cycles.",
-    image: "/Certification/chat_gpt for coders.png",
+    image: getAssetPath("/Certification/chat_gpt for coders.png"),
   },
   {
     id: "claude-code-in-action",
@@ -444,7 +446,7 @@ export const CERTIFICATIONS: Certification[] = [
     skills: ["Anthropic Claude", "Agentic Workflows", "API Integration", "Context Management"],
     summary:
       "Comprehensive training on leveraging Anthropic's Claude models for code synthesis, complex reasoning tasks, tool-use agentic architectures, and conversational AI interfaces.",
-    image: "/Certification/claude code for action.png",
+    image: getAssetPath("/Certification/claude code for action.png"),
   },
   {
     id: "yuva-ai-for-all",
@@ -455,7 +457,7 @@ export const CERTIFICATIONS: Certification[] = [
     skills: ["AI Fundamentals", "Machine Learning Concepts", "Ethical AI", "National AI Frameworks"],
     summary:
       "National AI literacy and foundational competence program conducted by TCS iON in partnership with the Government of India's IndiaAI initiative.",
-    image: "/Certification/yuva ai for all.png",
+    image: getAssetPath("/Certification/yuva ai for all.png"),
   },
   {
     id: "ai-impact-summit",
@@ -467,6 +469,6 @@ export const CERTIFICATIONS: Certification[] = [
     skills: ["Generative AI Trends", "Cloud AI Architecture", "Industry AI Applications"],
     summary:
       "Hands-on workshop exploring industrial AI deployment patterns, real-world case studies, and scalable AI application design.",
-    image: "/Certification/AI Impact Summit Pre-Summit.png",
+    image: getAssetPath("/Certification/AI Impact Summit Pre-Summit.png"),
   },
 ];

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getAssetPath } from "@/utils/assetPath";
 import {
   GraduationCap,
   Award,
@@ -126,7 +127,7 @@ export default function About() {
             <div className="relative group rounded-3xl p-1 bg-gradient-to-b from-cyan-500/40 via-sky-400/20 to-violet-500/40 shadow-2xl shadow-cyan-500/10">
               <div className="relative rounded-[22px] overflow-hidden bg-slate-950 aspect-[4/5] w-full max-w-md mx-auto">
                 <Image
-                  src="/images/myphoto.jpeg"
+                  src={getAssetPath("/images/myphoto.jpeg")}
                   alt="Hit Parekh — Full-Stack Web Developer"
                   fill
                   sizes="(max-width: 768px) 100vw, 420px"

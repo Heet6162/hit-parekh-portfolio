@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/utils/assetPath";
 import {
   X,
   Printer,
@@ -48,7 +49,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
   const handleDownloadPDF = () => {
     const link = document.createElement("a");
-    link.href = "/Hit_Parekh_Resume.pdf";
+    link.href = getAssetPath("/Hit_Parekh_Resume.pdf");
     link.download = "Hit_Parekh_Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -111,7 +112,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             <div className="flex items-center gap-5">
               <div className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden border-2 border-cyan-400/40 shadow-lg shrink-0 bg-slate-900">
                 <Image
-                  src="/images/myphoto.jpeg"
+                  src={getAssetPath("/images/myphoto.jpeg")}
                   alt="Hit Parekh"
                   fill
                   sizes="100px"
