@@ -167,8 +167,12 @@ export default function Contact() {
                       <p className="text-[11px] font-mono uppercase" style={{ color: "var(--text-muted)" }}>Email Address</p>
                       <a
                         href={`mailto:${PERSONAL_INFO.email}`}
-                        className="text-xs sm:text-sm font-semibold truncate block transition-colors hover:text-cyan-500"
+                        onClick={() => window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`, '_blank', 'noopener,noreferrer')}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs sm:text-sm font-semibold truncate block transition-colors hover:text-cyan-500 cursor-pointer"
                         style={{ color: "var(--text-primary)" }}
+                        title="Send email to Hit Parekh"
                       >
                         {PERSONAL_INFO.email}
                       </a>

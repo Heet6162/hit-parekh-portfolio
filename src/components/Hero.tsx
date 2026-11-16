@@ -215,13 +215,17 @@ export default function Hero({ onOpenResume }: HeroProps) {
 
                 <a
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="group p-2.5 rounded-xl border transition-all duration-200 hover:border-violet-400/60 hover:bg-violet-500/10"
+                  onClick={() => window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`, '_blank', 'noopener,noreferrer')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-2.5 rounded-xl border transition-all duration-200 hover:border-violet-400/60 hover:bg-violet-500/10 cursor-pointer"
                   style={{
                     backgroundColor: "var(--bg-card)",
                     borderColor: "var(--border)",
                     color: "var(--text-secondary)",
                   }}
                   aria-label="Email Hit Parekh"
+                  title="Email Hit Parekh"
                 >
                   <Mail className="w-5 h-5 text-violet-400 group-hover:scale-110 transition-transform" />
                 </a>

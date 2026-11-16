@@ -21,6 +21,15 @@ export default function Footer() {
     });
   };
 
+  const handleMailClick = (e: React.MouseEvent) => {
+    // Open Gmail web composer directly in a new tab so it works seamlessly on all browsers
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${PERSONAL_INFO.email}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
@@ -33,7 +42,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative border-t pt-16 pb-12 overflow-hidden"
+      className="relative border-t pt-16 pb-28 sm:pb-32 overflow-hidden"
       style={{
         backgroundColor: "var(--bg-primary)",
         borderColor: "var(--border)",
@@ -118,13 +127,14 @@ export default function Footer() {
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-xl border transition-all hover:border-cyan-400/50 hover:bg-cyan-500/10"
+                className="p-2.5 rounded-xl border transition-all hover:border-cyan-400/50 hover:bg-cyan-500/10 cursor-pointer"
                 style={{
                   backgroundColor: "var(--bg-card)",
                   borderColor: "var(--border)",
                   color: "var(--text-primary)",
                 }}
                 aria-label="GitHub Profile"
+                title="GitHub Profile"
               >
                 <GitHubIcon className="w-4 h-4" style={{ fill: "var(--text-primary)" }} />
               </a>
@@ -133,34 +143,53 @@ export default function Footer() {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 rounded-xl border transition-all hover:border-cyan-400/50 hover:bg-cyan-500/10"
+                className="p-2.5 rounded-xl border transition-all hover:border-cyan-400/50 hover:bg-cyan-500/10 cursor-pointer"
                 style={{
                   backgroundColor: "var(--bg-card)",
                   borderColor: "var(--border)",
                   color: "var(--text-primary)",
                 }}
                 aria-label="LinkedIn Profile"
+                title="LinkedIn Profile"
               >
                 <LinkedInIcon className="w-4 h-4 text-cyan-500" />
               </a>
 
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="p-2.5 rounded-xl border transition-all hover:border-violet-400/50 hover:bg-violet-500/10"
+                onClick={handleMailClick}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl border transition-all hover:border-violet-400/50 hover:bg-violet-500/10 cursor-pointer"
                 style={{
                   backgroundColor: "var(--bg-card)",
                   borderColor: "var(--border)",
                   color: "var(--text-primary)",
                 }}
                 aria-label="Send Email"
+                title="Send Email"
               >
                 <Mail className="w-4 h-4 text-violet-500 dark:text-violet-400" />
               </a>
             </div>
 
-            <div className="text-xs font-mono space-y-1" style={{ color: "var(--text-muted)" }}>
-              <p style={{ color: "var(--text-secondary)" }}>{PERSONAL_INFO.email}</p>
-              <p>{PERSONAL_INFO.phoneFormatted}</p>
+            <div className="text-xs font-mono space-y-1.5" style={{ color: "var(--text-muted)" }}>
+              <a
+                href={`mailto:${PERSONAL_INFO.email}`}
+                onClick={handleMailClick}
+                className="block transition-colors hover:text-cyan-400 cursor-pointer truncate"
+                style={{ color: "var(--text-secondary)" }}
+                title="Email Hit Parekh"
+              >
+                {PERSONAL_INFO.email}
+              </a>
+              <a
+                href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, "")}`}
+                className="block transition-colors hover:text-cyan-400 cursor-pointer"
+                title="Call Hit Parekh"
+              >
+                {PERSONAL_INFO.phoneFormatted}
+              </a>
             </div>
           </div>
         </div>

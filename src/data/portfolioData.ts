@@ -62,7 +62,7 @@ export const PERSONAL_INFO = {
   email: "parekhheet1@gmail.com",
   phone: "+91 88668 21294",
   phoneFormatted: "+91 88668 21294",
-  linkedin: "https://linkedin.com/in/hit-parekh-a34b6031b",
+  linkedin: "https://www.linkedin.com/in/hit-parekh-a34b6031b/",
   github: "https://github.com/Heet6162",
   status: "Available for Opportunities",
   education: {

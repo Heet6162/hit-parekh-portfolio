@@ -111,7 +111,6 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                   className="w-full h-full object-contain dark:hidden block filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.12)]"
                   priority
                 />
-                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#05070f] animate-pulse" />
               </div>
               <div className="flex flex-col text-left">
                 <span
