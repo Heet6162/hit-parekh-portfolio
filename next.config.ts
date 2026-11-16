@@ -1,9 +1,19 @@
 import type { NextConfig } from "next";
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
+let repo = "";
+if (isGithubActions) {
+  const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] || "";
+  repo = repoName.endsWith(".github.io") ? "" : `/${repoName}`;
+}
+
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  output: "export",
+  basePath: repo,
+  assetPrefix: repo ? `${repo}/` : undefined,
+  images: {
+    unoptimized: true,
+  },
   turbopack: {
     rules: {
       "*.css": {
